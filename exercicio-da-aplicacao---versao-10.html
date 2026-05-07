@@ -1,0 +1,1598 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Uma introdução ao PHP7 através de exemplos">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/pt-php7-juillet-2019/exercicio-da-aplicacao---versao-10.html">
+      
+      
+        <link rel="prev" href="exercicio-pratico---versao-9.html">
+      
+      
+        <link rel="next" href="processamento-de-documentos-xml.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>20. Exercício da Aplicação – Versão 10 - Uma introdução ao PHP7 através de exemplos</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "Uma introdução ao PHP7 através de exemplos";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#20-exercicio-da-aplicacao-versao-10" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Uma introdução ao PHP7 através de exemplos" class="md-header__button md-logo" aria-label="Uma introdução ao PHP7 através de exemplos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Uma introdução ao PHP7 através de exemplos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              20. Exercício da Aplicação – Versão 10
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Mudar para o modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para o modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Mudar para o modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para o modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/pt-php7-juillet-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Uma introdução ao PHP7 através de exemplos" class="md-nav__button md-logo" aria-label="Uma introdução ao PHP7 através de exemplos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Uma introdução ao PHP7 através de exemplos
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/pt-php7-juillet-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bem-vindos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introducao-ao-php-7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introdução ao PHP 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="configurar-um-ambiente-de-desenvolvimento.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Configurar um ambiente de desenvolvimento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="os-conceitos-basicos-do-php.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Os conceitos básicos do PHP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercicio-pratico---versoes-1-e-2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Exercício Prático – Versões 1 e 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="classes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="interfaces.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Interfaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="excecoes-e-erros.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Exceções e erros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercicio-pratico---versao-3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Exercício prático – Versão 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="traits.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Traits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="aplicacoes-em-camadas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Aplicações em camadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercicio-pratico---versao-4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Exercício Prático – Versão 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="utilizacao-do-sgbd-mysql.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Utilização do SGBD MySQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercicio-pratico---versao-5.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Exercício prático – Versão 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercicio-de-aplicacao---versao-6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Exercício de Aplicação – Versão 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercicio-de-aplicacao---versao-7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Exercício de aplicação – Versão 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="funcoes-de-rede.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Funções de rede
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="servicos-web.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Serviços Web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercicio-pratico---versao-8.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. Exercício prático – Versão 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercicio-pratico---versao-9.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19. Exercício prático – Versão 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20. Exercício da Aplicação – Versão 10
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="exercicio-da-aplicacao---versao-10.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20. Exercício da Aplicação – Versão 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#201-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.1. Redis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202-instalacao-do-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.2. Instalação do Redis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#203-o-cliente-redis-no-modo-de-comando" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.3. O cliente Redis no modo de comando
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#204-instalar-um-cliente-redis-para-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.4. Instalar um cliente Redis para PHP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#205-codigo-do-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.5. Código do servidor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#206-codigo-do-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.6. Código do cliente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#207-codeception-testes-de-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.7. [Codeception] testes de cliente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#208-interface-web-do-servidor-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20.8. Interface Web do Servidor [Redis]
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="processamento-de-documentos-xml.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    21. Processamento de documentos XML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercicio-de-aplicacao---versao-11.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    22. Exercício de Aplicação – Versão 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercicio-pratico---versao-12.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    23. Exercício Prático – Versão 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercicio-da-aplicacao---versao-13.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24. Exercício da Aplicação – Versão 13
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="toc42690087"></a>
+<a id="toc42690473"></a>
+<a id="toc42690859"></a>
+<a id="refheadingtoc185701971629160"></a></p>
+<h1 id="20-exercicio-da-aplicacao-versao-10">20. <span style="color: #365f91">Exercício da Aplicação – Versão 10</span></h1>
+<p>A versão anterior mostrou que os dados fiscais, partilhados por todos os utilizadores da aplicação, devem ser armazenados num cache de âmbito <strong>[Application]</strong>. Iremos utilizar um servidor Redis <strong>[https://redis.io]</strong> para implementar isto.</p>
+<p><a id="toc42690088"></a>
+<a id="toc42690474"></a>
+<a id="toc42690860"></a>
+<a id="refheadingtoc185703971629160"></a></p>
+<h2 id="201-redis">20.1. <span style="color: #4f81bd">Redis</span></h2>
+<p>A memória de âmbito <strong>[Application]</strong> será implementada por um servidor Redis. Os scripts PHP que necessitam desta memória da aplicação serão clientes deste servidor:</p>
+<p><img src="images/10000000000006E50000016D026275D9.png" width="530" height="109" style="width:14.011cm;height:2.896cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006E50000016D026275D9.png" /></p>
+<p><a id="toc42690089"></a>
+<a id="toc42690475"></a>
+<a id="toc42690861"></a>
+<a id="refheadingtoc185705971629160"></a></p>
+<h2 id="202-instalacao-do-redis">20.2. <span style="color: #4f81bd">Instalação do Redis</span></h2>
+<p>O Laragon vem com um servidor Redis que não está ativado por predefinição. Por isso, deve começar por ativá-lo:</p>
+<p><img src="images/100000000000073600000303CE510638.png" width="554" height="231" style="width:14.653cm;height:6.121cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000073600000303CE510638.png" /></p>
+<ul>
+  <li>Em <b>[3]</b>, ative o servidor<b> [Redis]</b>;
+  </li>
+  <li>Em <b>[4]</b>, deixe a porta <b>[6379] </b>como a predefinição utilizada pelos clientes Redis;
+  </li>
+</ul>
+
+<p>Os serviços do Laragon são reiniciados automaticamente após o Redis ser ativado:</p>
+<p><img src="images/10000000000004F6000001F85B242593.png" width="381" height="151" style="width:10.081cm;height:4.001cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004F6000001F85B242593.png" /></p>
+<p><a id="toc42690090"></a>
+<a id="toc42690476"></a>
+<a id="toc42690862"></a>
+<a id="refheadingtoc185707971629160"></a></p>
+<h2 id="203-o-cliente-redis-no-modo-de-comando">20.3. <span style="color: #4f81bd">O cliente Redis no modo de comando</span></h2>
+<p>O servidor Redis pode ser consultado no modo de comando. Abra um terminal Laragon (consulte a secção <a href="#installationdelaragon"><u><span style="color: #0563c1">de links</span></u></a>):</p>
+<p><img src="images/100000000000079C00000250F06351A7.png" width="682" height="207" style="width:18.039cm;height:5.482cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000079C00000250F06351A7.png" /></p>
+<ul>
+  <li>Em <b>[1]</b>, o comando<b> [redis-cli] </b>inicia o cliente no modo de comando para o servidor Redis;
+  </li>
+</ul>
+
+<p>Em julho de 2019, o cliente Redis suportava 172 comandos para interagir com o servidor <strong>[https://redis.io/commands#list]</strong>. Um deles <strong>[contagem de comandos] [2]</strong> exibe este número <strong>[3]</strong>.</p>
+<p>Abordaremos apenas os que precisamos para a nossa aplicação PHP. Utilizaremos o Redis com um único objetivo: armazenar um array <strong>[‘atributo’=&gt;’valor’]</strong> na memória do Redis. Isto é feito com o comando Redis <strong>[set atributo valor] [4]</strong>. O valor pode então ser recuperado utilizando o comando <strong>[get atributo] [5]</strong>. É tudo o que precisamos.</p>
+<p>Pode ser necessário limpar a memória do Redis. Isto é feito com o comando <strong>[flushdb] [6]</strong>. Depois, se consultarmos o valor do atributo <strong>[title] [7]</strong>, obtemos uma referência <strong>[nil] [8]</strong> indicando que o atributo não foi encontrado. Também podemos usar o comando <strong>[exists] [9-10]</strong> para verificar se um atributo existe.</p>
+<p>Para sair do cliente Redis, digite o comando <strong>[quit] [11]</strong>.</p>
+<p><a id="toc42690091"></a>
+<a id="toc42690477"></a>
+<a id="toc42690863"></a>
+<a id="refheadingtoc185709971629160"></a></p>
+<h2 id="204-instalar-um-cliente-redis-para-php">20.4. <span style="color: #4f81bd">Instalar um cliente Redis para PHP</span></h2>
+<p>Agora precisamos de instalar um cliente Redis para PHP:</p>
+<p><img src="images/10000000000006C1000001661065C383.png" width="519" height="107" style="width:13.72cm;height:2.842cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006C1000001661065C383.png" /></p>
+<p>Existem várias bibliotecas que implementam um cliente Redis. Iremos utilizar a biblioteca <strong>[Predis] [https://github.com/nrk/predis]</strong> (julho de 2019). Tal como as anteriores, esta é instalada com <strong>o [composer]</strong> num terminal Laragon:</p>
+<p><img src="images/1000000000000748000002925C134594.png" width="652" height="230" style="width:17.26cm;height:6.092cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000748000002925C134594.png" /></p>
+<p><a id="codeduserveur"></a>
+<a id="refheadingtoc1906941531191796"></a>
+<a id="toc42690092"></a>
+<a id="toc42690478"></a>
+<a id="toc42690864"></a></p>
+<h2 id="205-codigo-do-servidor">20.5. <span style="color: #4f81bd">Código do servidor</span></h2>
+<p><img src="images/100000000000017A000001060D4D315E.png" width="132" height="92" style="width:3.5cm;height:2.425cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017A000001060D4D315E.png" /></p>
+<p>O ficheiro de configuração <strong>[config-server.json]</strong> é alterado da seguinte forma:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;rootDirectory&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;C:/myprograms/laragon-lite/www/php7/scripts-web/impots/version-10&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;databaseFilename&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;Data/database.json&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;relativeDependencies&quot;</span>: [</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-08/Entities/BaseEntity.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-08/Entities/ExceptionImpots.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-08/Entities/TaxAdminData.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-08/Entities/Database.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-08/Dao/InterfaceServerDao.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-08/Dao/ServerDao.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-09/Dao/ServerDaoWithSession.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-08/Métier/InterfaceServerMetier.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-08/Métier/ServerMetier.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-09/Utilities/Logger.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-09/Utilities/SendAdminMail.php&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    ],</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;absoluteDependencies&quot;</span>: [</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;C:/myprograms/laragon-lite/www/vendor/autoload.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;</span><span style="font-style:italic;background-color:#ffff00;color:#2a00ff">C:/myprograms/laragon-lite/www/vendor/predis/predis/autoload.php</span><span style="font-style:italic;color:#2a00ff">&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    ],</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;users&quot;</span>: [</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#7f007f">&quot;login&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;admin&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#7f007f">&quot;passwd&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;admin&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    ],</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;adminMail&quot;</span>: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#7f007f">&quot;smtp-server&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;localhost&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#7f007f">&quot;smtp-port&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;25&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#7f007f">&quot;from&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;guest@localhost&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#7f007f">&quot;to&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;guest@localhost&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#7f007f">&quot;subject&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;plantage du serveur de calcul d&#x27;impôts&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#7f007f">&quot;tls&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;FALSE&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#7f007f">&quot;attachments&quot;</span>: []</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;logsFilename&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;Data/logs.txt&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p><strong>Comentários</strong></p>
+<ul>
+  <li>linhas 5–15: A versão 10 não introduz nada de novo, além do script<b> [impots-server.php]</b>. Ela utiliza elementos das versões 08 e 09;
+  </li>
+  <li>linha 19: uma dependência necessária para a biblioteca<b> [predis] </b>que acabámos de instalar;
+  </li>
+</ul>
+
+<p>O código do servidor <strong>[impots-server.php]</strong> sofre as seguintes alterações:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// strict adherence to declared types of function parameters</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">declare </span><span style="color:#000000">(strict_types=1);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// namespace</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">namespace </span><span style="color:#000000">Application;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// error handling by PHP</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#000000">ini_set</span><span style="color:#000000">(</span><span style="color:#0000c0">&quot;display_errors&quot;</span><span style="color:#000000">, </span><span style="color:#0000c0">&quot;0&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">//</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// configuration file path</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#000000">define</span><span style="color:#000000">(</span><span style="font-style:italic;color:#0000c0">&quot;CONFIG_FILENAME&quot;</span><span style="color:#000000">, </span><span style="color:#0000c0">&quot;Data/config-server.json&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// class alias</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;background-color:#ffff00;color:#7f0055">use </span><span style="background-color:#ffff00;color:#000000">\Application\ServerDaoWithSession </span><span style="font-weight:bold;background-color:#ffff00;color:#7f0055">as </span><span style="background-color:#ffff00;color:#000000">ServerDaoWithRedis;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// session</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">$session = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#005032">Session</span><span style="color:#000000">();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">$session-&gt;start();</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">…</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">…</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// 1st log</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">$logger-&gt;write(</span><span style="color:#0000c0">&quot;\n---nouvelle requête\n&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// retrieve the current query</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">$request = </span><span style="color:#005032">Request</span><span style="color:#000000">::</span><span style="font-style:italic;color:#000000">createFromGlobals</span><span style="color:#000000">();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// authentication only the 1st time</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">if </span><span style="color:#000000">(!$session-&gt;has(</span><span style="color:#0000c0">&quot;user&quot;</span><span style="color:#000000">)) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  …</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">} </span><span style="font-weight:bold;color:#7f0055">else </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// log</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  $logger-&gt;write(</span><span style="color:#0000c0">&quot;Authentification prise en session…\n&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// we have a valid user - we check the parameters received</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">$erreurs = [];</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// you need three parameters GET</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">$method = </span><span style="font-style:italic;color:#000000">strtolower</span><span style="color:#000000">($request-&gt;getMethod());</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">…</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// mistakes?</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">if </span><span style="color:#000000">($erreurs) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// an error code 400 HTTP_BAD_REQUEST is sent to the customer</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-style:italic;color:#000000">sendResponse</span><span style="color:#000000">($response, </span><span style="font-weight:bold;color:#000000">[&quot;erreurs&quot; =&gt; $erreurs]</span><span style="color:#000000">, </span><span style="color:#005032">Response</span><span style="color:#000000">::</span><span style="font-style:italic;color:#0000c0">HTTP_BAD_REQUEST</span><span style="color:#000000">, [], $logger);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// completed</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">exit</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">} </span><span style="font-weight:bold;color:#7f0055">else </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// logs</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  $logger-&gt;write(</span><span style="color:#0000c0">&quot;paramètres </span><span style="font-weight:bold;color:#0000c0">[&#x27;marié&#x27;=&gt;$marié, &#x27;enfants&#x27;=&gt;$enfants, &#x27;salaire&#x27;=&gt;$salaire]</span><span style="color:#0000c0"> valides\n&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// we&#x27;ve got everything you need to work</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// Redis</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">\Predis\</span><span style="color:#005032">Autoloader</span><span style="color:#000000">::</span><span style="font-style:italic;color:#000000">register</span><span style="color:#000000">();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">try </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// customer [predis]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  $redis = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">\Predis\</span><span style="color:#005032">Client</span><span style="color:#000000">();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// connect to the server to see if it&#x27;s there</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  $redis-&gt;connect();</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">} </span><span style="font-weight:bold;color:#7f0055">catch </span><span style="color:#000000">(\Predis\Connection\</span><span style="color:#005032">ConnectionException</span><span style="color:#000000"> $ex) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// internal server error</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-style:italic;color:#000000">doInternalServerError</span><span style="color:#000000">(</span><span style="color:#0000c0">&quot;</span><span style="font-weight:bold;color:#0000c0">[redis]</span><span style="color:#0000c0">, &quot; </span><span style="color:#000000">. </span><span style="font-style:italic;color:#000000">utf8_encode</span><span style="color:#000000">($ex-&gt;getMessage()), $response, $config</span><span style="font-weight:bold;color:#000000">[&#x27;adminMail&#x27;]</span><span style="color:#000000">, $logger);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// completed</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">exit</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// creation of the [dao] layer</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">if </span><span style="color:#000000">(</span><span style="background-color:#ffff00;color:#000000">!$redis-&gt;get(</span><span style="background-color:#ffff00;color:#0000c0">&quot;taxAdminData&quot;</span><span style="background-color:#ffff00;color:#000000">)</span><span style="color:#000000">) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// tax data is taken from the database</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  $logger-&gt;write(</span><span style="color:#0000c0">&quot;données fiscales prises en base de données\n&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">try </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// construction of the [dao] layer</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    $dao = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="background-color:#ffff00;color:#005032">ServerDaoWithRedis</span><span style="color:#000000">($config</span><span style="font-weight:bold;color:#000000">[&quot;databaseFilename&quot;]</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">NULL</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// put tax data in scope memory [application]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// method [TaxAdminData]-&gt;__toString will be called implicitly</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="background-color:#ffff00;color:#000000">$redis-&gt;set(</span><span style="background-color:#ffff00;color:#0000c0">&quot;taxAdminData&quot;</span><span style="background-color:#ffff00;color:#000000">, $dao-&gt;getTaxAdminData())</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="font-weight:bold;color:#7f0055">catch </span><span style="color:#000000">(\</span><span style="color:#005032">RuntimeException</span><span style="color:#000000"> $ex) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// we note the error</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-style:italic;color:#000000">doInternalServerError</span><span style="color:#000000">(</span><span style="color:#0000c0">&quot;</span><span style="font-weight:bold;color:#0000c0">[dao]</span><span style="color:#0000c0">, &quot; </span><span style="color:#000000">. </span><span style="font-style:italic;color:#000000">utf8_encode</span><span style="color:#000000">($ex-&gt;getMessage()), $response, $config</span><span style="font-weight:bold;color:#000000">[&#x27;adminMail&#x27;]</span><span style="color:#000000">, $logger, $redis);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// completed</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">exit</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">} </span><span style="font-weight:bold;color:#7f0055">else </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// tax data are taken from the [application] scope memory</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  $arrayOfAttributes = \</span><span style="font-style:italic;color:#000000">json_decode</span><span style="color:#000000">(</span><span style="background-color:#ffff00;color:#000000">$redis-&gt;get(</span><span style="background-color:#ffff00;color:#0000c0">&quot;taxAdminData&quot;</span><span style="background-color:#ffff00;color:#000000">)</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">true</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  $taxAdminData = (</span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#005032">TaxAdminData</span><span style="color:#000000">())-&gt;setFromArrayOfAttributes($arrayOfAttributes);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// istanciation of the [dao] layer</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  $dao = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="background-color:#ffff00;color:#005032">ServerDaoWithRedis</span><span style="color:#000000">(</span><span style="font-weight:bold;color:#7f0055">NULL</span><span style="color:#000000">, $taxAdminData);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// logs</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  $logger-&gt;write(</span><span style="color:#0000c0">&quot;données fiscales prises dans redis\n&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// creation of the [business] layer</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">$métier = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#005032">ServerMetier</span><span style="color:#000000">($dao);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// tAX CALCULATION</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">$result = $métier-&gt;calculerImpot($marié, (int) $enfants, (int) $salaire);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// we return the answer</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#000000">sendResponse</span><span style="color:#000000">($response, $result, </span><span style="color:#005032">Response</span><span style="color:#000000">::</span><span style="font-style:italic;color:#0000c0">HTTP_OK</span><span style="color:#000000">, [], $logger, $redis);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// end</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">exit</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">function</span><span style="color:#000000"> </span><span style="font-style:italic;color:#000000">doInternalServerError</span><span style="color:#000000">(</span><span style="font-weight:bold;color:#7f0055">string </span><span style="color:#000000">$message, </span><span style="color:#005032">Response</span><span style="color:#000000"> $response, </span><span style="font-weight:bold;color:#7f0055">array </span><span style="color:#000000">$infos,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#005032">Logger</span><span style="color:#000000"> $logger = </span><span style="font-weight:bold;color:#7f0055">NULL</span><span style="color:#000000">, \Predis\</span><span style="color:#005032">Client</span><span style="color:#000000"> $</span><span style="background-color:#ffff00;color:#000000">predisClient</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">NULL</span><span style="color:#000000">) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $message: error message</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $response : answer HTTP</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $infos: information table for sending mail</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $result: results table</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $logger: application logger</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $predisClient: a customer [predis]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">//</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// send an e-mail to the administrator</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// SendAdminMail intercepts all exceptions and logs them itself</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  $infos</span><span style="font-weight:bold;color:#000000">[&#x27;message&#x27;]</span><span style="color:#000000"> = $message;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  $sendAdminMail = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#005032">SendAdminMail</span><span style="color:#000000">($infos, $logger);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  $sendAdminMail-&gt;send();</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// an error code 500 is sent to the customer</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-style:italic;color:#000000">sendResponse</span><span style="color:#000000">($response, </span><span style="font-weight:bold;color:#000000">[&quot;erreur&quot; =&gt; $message]</span><span style="color:#000000">, </span><span style="color:#005032">Response</span><span style="color:#000000">::</span><span style="font-style:italic;color:#0000c0">HTTP_INTERNAL_SERVER_ERROR</span><span style="color:#000000">, [], $logger, $</span><span style="background-color:#ffff00;color:#000000">predisClient</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// function to send HTTP response to client</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">function</span><span style="color:#000000"> </span><span style="font-style:italic;color:#000000">sendResponse</span><span style="color:#000000">(</span><span style="color:#005032">Response</span><span style="color:#000000"> $response, </span><span style="font-weight:bold;color:#7f0055">array </span><span style="color:#000000">$result, </span><span style="font-weight:bold;color:#7f0055">int </span><span style="color:#000000">$statusCode,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">array </span><span style="color:#000000">$headers, </span><span style="color:#005032">Logger</span><span style="color:#000000"> $logger = </span><span style="font-weight:bold;color:#7f0055">NULL</span><span style="color:#000000">, \Predis\</span><span style="color:#005032">Client</span><span style="color:#000000"> $</span><span style="background-color:#ffff00;color:#000000">predisClient</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">NULL</span><span style="color:#000000">) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $response : answer HTTP</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $result: results table</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $statusCode: HTTP response status</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $headers: HTTP headers to be included in the response</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $logger: application logger</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $predisClient: a customer [predis]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">//</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// status HTTTP</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  $response-&gt;setStatusCode($statusCode);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// body</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  $body = \</span><span style="font-style:italic;color:#000000">json_encode</span><span style="color:#000000">(</span><span style="font-weight:bold;color:#000000">[&quot;réponse&quot; =&gt; $result]</span><span style="color:#000000">, </span><span style="font-style:italic;color:#0000c0">JSON_UNESCAPED_UNICODE</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  $response-&gt;setContent($body);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// headers</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  $response-&gt;</span><span style="color:#0000c0">headers</span><span style="color:#000000">-&gt;add($headers);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// shipping</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  $response-&gt;send();</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// log</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">if </span><span style="color:#000000">($logger != </span><span style="font-weight:bold;color:#7f0055">NULL</span><span style="color:#000000">) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    $logger-&gt;write(</span><span style="color:#0000c0">&quot;</span><span style="color:#000000">$body</span><span style="color:#0000c0">\n&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $logger-&gt;close();</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// close connection [redis]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">if </span><span style="color:#000000">($predisClient != </span><span style="font-weight:bold;color:#7f0055">NULL</span><span style="color:#000000">) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="background-color:#ffff00;color:#000000">$predisClient-&gt;disconnect();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p><strong>Comentários</strong></p>
+<ul>
+  <li>linha 15: atribuímos o alias <b>[ServerDaoWithRedis] </b>à classe <b>[\Application\ServerDaoWithSession] </b>para refletir a alteração na implementação do script do servidor;
+  </li>
+  <li>linhas 18–19: a sessão é mantida. Aqui, precisamos de ter em conta duas informações:
+    <ul>
+      <li>o facto de o utilizador ter sido autenticado com sucesso. Esta informação tem âmbito<b> [sessão]</b>: está ligada a um utilizador específico e não é válida para outros utilizadores;
+      </li>
+      <li>os dados da administração fiscal. Esta informação tem âmbito<b> [application]</b>: não está ligada a um utilizador específico, mas aplica-se a todos os utilizadores;
+      </li>
+    </ul>
+  </li>
+  <li>linhas 54–64: criação do cliente<b> [redis] </b>que irá comunicar com o servidor<b> [redis]</b>. Este cliente irá comunicar com a porta predefinida do servidor. Se o servidor não estivesse a comunicar na sua porta predefinida ou se não estivesse na máquina<b> [localhost]</b>, esta informação teria de ser passada ao construtor da classe<b> [\Predis\Client]</b>;
+  </li>
+  <li>linha 59: o cliente é imediatamente ligado ao servidor para verificar se este responde;
+  </li>
+  <li>linhas 60–65: se a ligação ao servidor Redis falhar, é enviada uma resposta de erro ao cliente e um e-mail é enviado ao administrador da aplicação;
+  </li>
+  <li>linha 67: consultamos o servidor<b> [redis] </b>pela chave <b>[taxAdminData]</b>. Se não for encontrada, os dados fiscais são recuperados da base de dados (linha 72);
+  </li>
+  <li>linha 75: a chave <b>[taxAdminData] </b>é armazenada na memória<b> [redis] </b>juntamente com a cadeia JSON da variável <b>[$taxAdminData], </b>que é um objeto do tipo <b>[TaxAdminData]</b>. O método<b> [$redis→set] </b>espera uma string como valor da chave. Por isso, tentará converter o objeto<b> [TaxAdminData] </b>para o tipo<b> [string]</b>. Isto chama implicitamente o método<b> [TaxAdminData-&gt;__toString]</b>, que produz a string JSON do objeto<b> [TaxAdminData]</b>;
+  </li>
+  <li>linha 84: a chave <b>[taxAdminData] </b>está na memória<b> [redis]</b>, pelo que recuperamos o seu valor. Sabemos que se trata da cadeia JSON de um objeto<b> [TaxAdminData]</b>. Em seguida, analisamos esta cadeia para obter uma matriz de atributos;
+  </li>
+  <li>linha 85: a partir desta matriz, é instanciado um novo objeto<b> [TaxAdminData]</b>;
+  </li>
+  <li>linha 87: a camada<b> [dao] </b>é instanciada;
+  </li>
+</ul>
+<p><a id="toc42690093"></a>
+<a id="toc42690479"></a>
+<a id="toc42690865"></a>
+<a id="refheadingtoc185711971629160"></a></p>
+<h2 id="206-codigo-do-cliente">20.6. <span style="color: #4f81bd">Código do cliente</span></h2>
+<p><img src="images/10000000000001C60000012B855C7CB0.png" width="159" height="105" style="width:4.202cm;height:2.768cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C60000012B855C7CB0.png" /></p>
+<p>A versão 10 do cliente é idêntica à versão 9. A única alteração é no ficheiro de configuração <strong>[config-client.json]</strong>:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;rootDirectory&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;C:/Data/st-2019/dev/php7/poly/scripts-console/impots/version-10&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;taxPayersDataFileName&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;Data/taxpayersdata.json&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;resultsFileName&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;Data/results.json&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;errorsFileName&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;Data/errors.json&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;dependencies&quot;</span>: [</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-08/Entities/BaseEntity.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-08/Entities/TaxPayerData.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-08/Entities/ExceptionImpots.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-08/Utilities/Utilitaires.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-08/Dao/InterfaceClientDao.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-08/Dao/TraitDao.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-09/Dao/ClientDao.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-08/Métier/InterfaceClientMetier.php&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;/../version-08/Métier/ClientMetier.php&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    ],</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;absoluteDependencies&quot;</span>: [</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-style:italic;color:#2a00ff">&quot;C:/myprograms/laragon-lite/www/vendor/autoload.php&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    ],</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;user&quot;</span>: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#7f007f">&quot;login&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;admin&quot;</span>,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#7f007f">&quot;passwd&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;admin&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#7f007f">&quot;urlServer&quot;</span>: <span style="font-style:italic;color:#2a00ff">&quot;</span><span style="font-style:italic;background-color:#ffff00;color:#2a00ff">https://localhost:443/php7/scripts-web/impots/version-10/impots-server.php</span><span style="font-style:italic;color:#2a00ff">&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p>A única alteração é o URL do servidor na linha 24.</p>
+<p>Os resultados são os mesmos da versão 09. Vamos apenas testar um novo caso de erro:</p>
+<p><img src="images/1000000000000722000002C9845AE03A.png" width="548" height="214" style="width:14.49cm;height:5.659cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000722000002C9845AE03A.png" /></p>
+<p>O resultado na consola é o seguinte:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">L&#x27;erreur suivante s&#x27;est produite : {&quot;statut HTTP&quot;:<span style="background-color:#ffb66c">500</span>,&quot;erreur&quot;:&quot;<span style="font-weight:bold;background-color:#ffff00">[redis]</span><span style="background-color:#ffff00">, Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée. </span><span style="font-weight:bold;background-color:#ffff00">[tcp:\/\/127.0.0.1:6379]</span>&quot;}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">Terminé</span></span>
+</code></pre></div>
+
+<p><a id="toc42690094"></a>
+<a id="toc42690480"></a>
+<a id="toc42690866"></a>
+<a id="refheadingtoc185713971629160"></a></p>
+<h2 id="207-codeception-testes-de-cliente">20.7. <span style="color: #4f81bd">[Codeception] testes de cliente</span></h2>
+<p><img src="images/10000000000001CB000001AE771AA7CC.png" width="161" height="150" style="width:4.249cm;height:3.981cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001CB000001AE771AA7CC.png" /></p>
+<p>A classe de teste <strong>[ClientMetierTest]</strong> na versão 10 é idêntica à da versão 09, com uma exceção:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// strict adherence to declared types of function parameters</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">declare </span><span style="color:#000000">(strict_types=1);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// namespace</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">namespace </span><span style="color:#000000">Application;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// definition of constants</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#000000">define</span><span style="color:#000000">(</span><span style="font-style:italic;color:#0000c0">&quot;ROOT&quot;</span><span style="color:#000000">, </span><span style="color:#0000c0">&quot;</span><span style="background-color:#ffff00;color:#0000c0">C:/Data/st-2019/dev/php7/poly/scripts-console/impots/version-10</span><span style="color:#0000c0">&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">…</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<ul>
+  <li>linha 10: o ambiente de teste é o do cliente da versão 10;
+  </li>
+</ul>
+
+<p>Antes de iniciar os testes, vamos usar o cliente <strong>[redis-cli]</strong> para eliminar a chave <strong>[taxAdminData]</strong> da memória do servidor <strong>[redis]</strong>:</p>
+<p><img src="images/10000000000002A90000016365250EAD.png" width="238" height="124" style="width:6.309cm;height:3.29cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002A90000016365250EAD.png" /></p>
+<p>Agora, vamos executar o teste:</p>
+<p><img src="images/100000000000067400000231D9299178.png" width="495" height="168" style="width:13.109cm;height:4.452cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000067400000231D9299178.png" /></p>
+<p>Agora vamos examinar os registos do servidor <strong>[logs.txt]</strong>:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:396 :</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">---nouvelle requête</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:403 : Autentification en cours…</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:403 : Authentification réussie <span style="font-weight:bold">[admin, admin]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:403 : paramètres [&#x27;marié&#x27;=&gt;oui, &#x27;enfants&#x27;=&gt;2, &#x27;salaire&#x27;=&gt;55555] valides</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:407 : <span style="background-color:#ffff00">données fiscales prises en base de données</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:420 : {&quot;réponse&quot;:{&quot;impôt&quot;:2814,&quot;surcôte&quot;:0,&quot;décôte&quot;:0,&quot;réduction&quot;:0,&quot;taux&quot;:0.14}}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:546 :</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">---nouvelle requête</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:555 : Autentification en cours…</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:555 : Authentification réussie <span style="font-weight:bold">[admin, admin]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:556 : paramètres [&#x27;marié&#x27;=&gt;oui, &#x27;enfants&#x27;=&gt;2, &#x27;salaire&#x27;=&gt;50000] valides</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:559 : <span style="background-color:#ffff00">données fiscales prises dans redis</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:559 : {&quot;réponse&quot;:{&quot;impôt&quot;:1384,&quot;surcôte&quot;:0,&quot;décôte&quot;:384,&quot;réduction&quot;:347,&quot;taux&quot;:0.14}}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:668 :</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">---nouvelle requête</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:675 : Autentification en cours…</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:675 : Authentification réussie <span style="font-weight:bold">[admin, admin]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:675 : paramètres [&#x27;marié&#x27;=&gt;oui, &#x27;enfants&#x27;=&gt;3, &#x27;salaire&#x27;=&gt;50000] valides</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:678 : <span style="background-color:#ffff00">données fiscales prises dans redis</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:678 : {&quot;réponse&quot;:{&quot;impôt&quot;:0,&quot;surcôte&quot;:0,&quot;décôte&quot;:720,&quot;réduction&quot;:0,&quot;taux&quot;:0.14}}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">05/07/19 08:52:16:776 :</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">---nouvelle requête</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">…</span></span>
+</code></pre></div>
+
+<p>Já mencionámos que, para cada teste, o construtor da classe de teste é reexecutado, o que significa que a classe <strong>[ClientDao]</strong> que está a ser testada é instanciada com um cookie de sessão inexistente para cada teste. Tudo decorre, portanto, como se os 11 testes representassem 11 utilizadores diferentes, com 11 sessões diferentes.</p>
+<ul>
+  <li>linha 6: os dados fiscais são recuperados da base de dados;
+  </li>
+  <li>linhas 13, 20: os dados fiscais são recuperados da memória<b> [Redis]</b>. Temos, portanto, uma memória de âmbito<b> [aplicação] </b>partilhada por todos os utilizadores da aplicação;
+  </li>
+</ul>
+<p><a id="toc42690095"></a>
+<a id="toc42690481"></a>
+<a id="toc42690867"></a>
+<a id="refheadingtoc185715971629160"></a></p>
+<h2 id="208-interface-web-do-servidor-redis">20.8. <span style="color: #4f81bd">Interface Web do Servidor [Redis]</span></h2>
+<p>Vimos que o servidor <strong>[Redis]</strong> pode ser gerido no modo de comando. Também pode ser gerido através de uma interface web:</p>
+<p><img src="images/100000000000078C000002E3B41FA763.png" width="580" height="222" style="width:15.341cm;height:5.868cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000078C000002E3B41FA763.png" /></p>
+<ul>
+  <li>em <b>[4]</b>, o URL de administração;
+  </li>
+  <li>em <b>[5]</b>, as chaves armazenadas pelo servidor;
+  </li>
+  <li>em <b>[6]</b>, o estado atual do servidor;
+  </li>
+</ul>
+
+<p>Ao clicar em <strong>[5]</strong>, pode visualizar informações sobre a chave <strong>[taxAdminData]</strong>:</p>
+<p><img src="images/10000000000006AD000002EEF7B4330F.png" width="513" height="225" style="width:13.563cm;height:5.951cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006AD000002EEF7B4330F.png" /></p>
+<ul>
+  <li>em <b>[7]</b>, o URL que dá acesso às informações da chave<b> [taxAdminData] [8]</b>;
+  </li>
+  <li>em <b>[9]</b>, o estado da chave;
+  </li>
+  <li>em <b>[10]</b>, o seu valor: é possível reconhecer a cadeia JSON de um objeto<b> [TaxAdminData]</b>;
+  </li>
+  <li>Em <b>[11]</b>, pode eliminar a chave;
+  </li>
+  <li>em <b>[12]</b>, pode adicionar outra;
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        Este curso-tutorial escrito por <strong>Serge Tahé</strong> é disponibilizado ao público de acordo com os termos da
+        <em>Licença Creative Commons Atribuição – Sem uso comercial –
+        Partilha nas mesmas condições 3.0 não adaptada</em>.
+
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
