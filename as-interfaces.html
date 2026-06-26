@@ -12,10 +12,10 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/pt-php7-juillet-2019/interfaces.html">
+        <link rel="canonical" href="https://stahe.github.io/pt-php7-juillet-2019/as-interfaces.html">
       
       
-        <link rel="prev" href="classes.html">
+        <link rel="prev" href="as-classes.html">
       
       
         <link rel="next" href="excecoes-e-erros.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>6. Interfaces - Uma introdução ao PHP7 através de exemplos</title>
+        <title>6. As interfaces - Uma introdução ao PHP7 através de exemplos</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#6-interfaces" class="md-skip">
+        <a href="#6-as-interfaces" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              6. Interfaces
+              6. As interfaces
             
           </span>
         </div>
@@ -303,14 +305,14 @@
   
   
     <li class="md-nav__item">
-      <a href="introducao-ao-php-7.html" class="md-nav__link">
+      <a href="introducao-a-linguagem-php-7.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Introdução ao PHP 7
+    1. Introdução à linguagem PHP 7
   
 
     
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="configurar-um-ambiente-de-desenvolvimento.html" class="md-nav__link">
+      <a href="instalacao-de-um-ambiente-de-trabalho.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. Configurar um ambiente de desenvolvimento
+    2. Instalação de um ambiente de trabalho
   
 
     
@@ -357,14 +359,14 @@
   
   
     <li class="md-nav__item">
-      <a href="os-conceitos-basicos-do-php.html" class="md-nav__link">
+      <a href="nocoes-basicas-do-php.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Os conceitos básicos do PHP
+    3. Noções básicas do PHP
   
 
     
@@ -391,7 +393,7 @@
   <span class="md-ellipsis">
     
   
-    4. Exercício Prático – Versões 1 e 2
+    4. Exercício prático – versões 1 e 2
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="classes.html" class="md-nav__link">
+      <a href="as-classes.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Classes
+    5. As classes
   
 
     
@@ -454,7 +456,7 @@
   <span class="md-ellipsis">
     
   
-    6. Interfaces
+    6. As interfaces
   
 
     
@@ -465,14 +467,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="interfaces.html" class="md-nav__link md-nav__link--active">
+      <a href="as-interfaces.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Interfaces
+    6. As interfaces
   
 
     
@@ -531,10 +533,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#64-passar-uma-interface-como-parametro-de-funcao" class="md-nav__link">
+  <a href="#64-passagem-de-uma-interface-como-parametro-de-uma-funcao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.4. Passar uma interface como parâmetro de função
+        6.4. Passagem de uma interface como parâmetro de uma função
       
     </span>
   </a>
@@ -590,7 +592,7 @@
   <span class="md-ellipsis">
     
   
-    8. Exercício prático – Versão 3
+    8. Exercício prático – versão 3
   
 
     
@@ -610,14 +612,14 @@
   
   
     <li class="md-nav__item">
-      <a href="traits.html" class="md-nav__link">
+      <a href="os-traits.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. Traits
+    9. Os Traits
   
 
     
@@ -671,7 +673,7 @@
   <span class="md-ellipsis">
     
   
-    11. Exercício Prático – Versão 4
+    11. Exercício prático – versão 4
   
 
     
@@ -725,7 +727,7 @@
   <span class="md-ellipsis">
     
   
-    13. Exercício prático – Versão 5
+    13. Exercício prático – versão 5
   
 
     
@@ -745,14 +747,14 @@
   
   
     <li class="md-nav__item">
-      <a href="exercicio-de-aplicacao---versao-6.html" class="md-nav__link">
+      <a href="exercicio-pratico---versao-6.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Exercício de Aplicação – Versão 6
+    14. Exercício prático – versão 6
   
 
     
@@ -772,14 +774,14 @@
   
   
     <li class="md-nav__item">
-      <a href="exercicio-de-aplicacao---versao-7.html" class="md-nav__link">
+      <a href="exercicio-pratico---versao-7.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. Exercício de aplicação – Versão 7
+    15. Exercício prático – versão 7
   
 
     
@@ -833,7 +835,7 @@
   <span class="md-ellipsis">
     
   
-    17. Serviços Web
+    17. Serviços web
   
 
     
@@ -860,7 +862,7 @@
   <span class="md-ellipsis">
     
   
-    18. Exercício prático – Versão 8
+    18. Exercício prático – versão 8
   
 
     
@@ -887,7 +889,7 @@
   <span class="md-ellipsis">
     
   
-    19. Exercício prático – Versão 9
+    19. Exercício prático – versão 9
   
 
     
@@ -907,14 +909,14 @@
   
   
     <li class="md-nav__item">
-      <a href="exercicio-da-aplicacao---versao-10.html" class="md-nav__link">
+      <a href="exercicio-pratico---versao-10.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    20. Exercício da Aplicação – Versão 10
+    20. Exercício prático – versão 10
   
 
     
@@ -961,14 +963,14 @@
   
   
     <li class="md-nav__item">
-      <a href="exercicio-de-aplicacao---versao-11.html" class="md-nav__link">
+      <a href="exercicio-pratico---versao-11.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    22. Exercício de Aplicação – Versão 11
+    22. Exercício prático – versão 11
   
 
     
@@ -995,7 +997,7 @@
   <span class="md-ellipsis">
     
   
-    23. Exercício Prático – Versão 12
+    23. Exercício prático – versão 12
   
 
     
@@ -1015,14 +1017,14 @@
   
   
     <li class="md-nav__item">
-      <a href="exercicio-da-aplicacao---versao-13.html" class="md-nav__link">
+      <a href="exercicio-pratico---versao-13.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    24. Exercício da Aplicação – Versão 13
+    24. Exercício prático – versão 13
   
 
     
@@ -1052,114 +1054,114 @@
 
 
 
-<p><a id="toc42690259"></a>
-<a id="toc42689873"></a>
-<a id="refheading49023760291743"></a>
-<a id="toc42690645"></a></p>
-<h1 id="6-interfaces">6. <span style="color: #365f91">Interfaces</span></h1>
-<p>Uma interface é uma estrutura que define protótipos de métodos. Uma classe que implementa uma interface deve definir o código para todos os métodos da interface.</p>
-<p><a id="toc42690260"></a>
-<a id="toc42689874"></a>
-<a id="refheadingtoc787952244347140"></a>
-<a id="toc42690646"></a></p>
-<h2 id="61-a-arvore-de-scripts">6.1. <span style="color: #4f81bd">A árvore de scripts</span></h2>
-<p><img src="images/100000000000019C000001E2B4512BE4.png" width="144" height="169" style="width:3.821cm;height:4.47cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000019C000001E2B4512BE4.png" /></p>
-<p><a id="toc42690261"></a>
-<a id="toc42689875"></a>
-<a id="refheadingtoc55573710956990"></a>
-<a id="toc42690647"></a></p>
+<p><span id="toc42690259" name="toc42690259" class="odt-bookmark-anchor"></span>
+<span id="toc42690645" name="toc42690645" class="odt-bookmark-anchor"></span>
+<span id="refheading49023760291743" name="refheading49023760291743" class="odt-bookmark-anchor"></span>
+<span id="toc42689873" name="toc42689873" class="odt-bookmark-anchor"></span></p>
+<h1 id="6-as-interfaces">6. <span style="color: #365f91">As interfaces</span></h1>
+<p>Uma interface é uma estrutura que define protótipos de métodos. Uma classe que implementa uma interface deve definir o código de todos os métodos da interface.</p>
+<p><span id="toc42690260" name="toc42690260" class="odt-bookmark-anchor"></span>
+<span id="toc42690646" name="toc42690646" class="odt-bookmark-anchor"></span>
+<span id="refheadingtoc787952244347140" name="refheadingtoc787952244347140" class="odt-bookmark-anchor"></span>
+<span id="toc42689874" name="toc42689874" class="odt-bookmark-anchor"></span></p>
+<h2 id="61-a-arvore-de-scripts">6.1. <span style="color: #4f81bd"><strong>A árvore de scripts</strong></span></h2>
+<p><img src="images/100000000000019C000001E2B4512BE4.png" width="144" height="169" style="width:3.821cm;height:4.463cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000019C000001E2B4512BE4.png" /></p>
+<p><span id="toc42690261" name="toc42690261" class="odt-bookmark-anchor"></span>
+<span id="toc42690647" name="toc42690647" class="odt-bookmark-anchor"></span>
+<span id="refheadingtoc55573710956990" name="refheadingtoc55573710956990" class="odt-bookmark-anchor"></span>
+<span id="toc42689875" name="toc42689875" class="odt-bookmark-anchor"></span></p>
 <h2 id="62-uma-primeira-interface">6.2. <span style="color: #4f81bd">Uma primeira interface</span></h2>
-<p>Definimos uma interface <strong>[IExample]</strong> num script <strong>[IExample.php]</strong>. Neste mesmo script, definimos duas classes que implementam a interface <strong>[IExample]</strong>:</p>
+<p>Definimos uma interface <strong>[IExemple]</strong> num script <strong>[IExemple.php]</strong>. Neste mesmo script, definimos duas classes que implementam a interface <strong>[IExemple]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// strict adherence to function parameter types</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// respeito rigoroso dos tipos dos parâmetros das funções</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">declare</span>(strict_types=<span style="color:#000080">1</span>);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// namespace</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// espaço de nomes</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">namespace</span><span style="color:#008080"> </span>Exemples;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// an interface</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// uma interface</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">interface</span><span style="color:#008080"> </span>IExemple<span style="color:#008080"> </span>{</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// interface methods</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// os métodos da interface</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>ajouter(<span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span>,<span style="color:#008080"> </span><span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$j</span>):<span style="color:#008080"> </span><span style="font-weight:bold">int</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>soustraire(<span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span>,<span style="color:#008080"> </span><span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$j</span>):<span style="color:#008080"> </span><span style="font-weight:bold">int</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// implementation 1 of the IExemple interface</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// implementação 1 da interface IExemple</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">class</span><span style="color:#008080"> </span>Classe1<span style="color:#008080"> </span><span style="font-weight:bold">implements</span><span style="color:#008080"> </span>IExemple<span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>ajouter(<span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$a</span>,<span style="color:#008080"> </span><span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$b</span>):<span style="color:#008080"> </span><span style="font-weight:bold">int</span><span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-weight:bold;color:#000000">return</span> <span style="color:#0000ff">$a</span> <span style="color:#000000">+</span> <span style="color:#0000ff">$b</span> <span style="color:#000000">+</span> <span style="color:#000080">10</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">}</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>soustraire(<span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$a</span>,<span style="color:#008080"> </span><span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$b</span>):<span style="color:#008080"> </span><span style="font-weight:bold">int</span><span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-weight:bold;color:#000000">return</span> <span style="color:#0000ff">$a</span> <span style="color:#000000">-</span> <span style="color:#0000ff">$b</span> <span style="color:#000000">+</span> <span style="color:#000080">20</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">}</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// implementation 2 of the IExemple interface</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// implementação 2 da interface IExemple</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">class</span><span style="color:#008080"> </span>Classe2<span style="color:#008080"> </span><span style="font-weight:bold">implements</span><span style="color:#008080"> </span>IExemple<span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>ajouter(<span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$a</span>,<span style="color:#008080"> </span><span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$b</span>)<span style="color:#008080"> : </span><span style="font-weight:bold">int</span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-weight:bold;color:#000000">return</span> <span style="color:#0000ff">$a</span> <span style="color:#000000">+</span> <span style="color:#0000ff">$b</span> <span style="color:#000000">+</span> <span style="color:#000080">100</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">}</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>soustraire(<span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$a</span>,<span style="color:#008080"> </span><span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$b</span>)<span style="color:#008080"> : </span><span style="font-weight:bold">int</span><span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-weight:bold;color:#000000">return</span> <span style="color:#0000ff">$a</span> <span style="color:#000000">-</span> <span style="color:#0000ff">$b</span> <span style="color:#000000">+</span> <span style="color:#000080">200</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">}</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p><strong>Comentários</strong></p>
 <ul>
-  <li>linhas 10–14: A interface <i>IExample </i>define dois métodos: a função <i>add </i>(linha 12) e a função <i>subtract </i>(linha 13). A interface não define o código para estes métodos. Serão as classes que implementam a interface a fazê-lo;
+  <li>linhas 10-14: a interface <i>IExemple </i>define dois métodos: a função <i>ajouter </i>(linha 12) e a função <i>soustraire </i>(linha 13). A interface não define o código destes métodos. São as classes que implementam a interface que o farão;
   </li>
-  <li>linha 17: A classe <i>Class1 </i><b>implementa </b>a interface <i>IExample</i>. Por conseguinte, define o código para o método <i>add </i>(linha 18) e para o método<i> subtract </i>(linha 22);
+  <li>linha 17: a classe <i>Classe1 </i>implement<b>a </b>a interface <i>IExemple</i>. Por conseguinte, define um código para os métodos <i>ajouter </i>(linha 18) e <i>soustraire </i>(linha 22);
   </li>
-  <li>linhas 29–38: o mesmo se aplica à classe <i>Class2;</i>
+  <li>linhas 29-38: o mesmo se aplica à classe <i>Classe2;</i>
   </li>
 </ul>
 
 <p>Utilizamos a interface <strong>[IExemple]</strong> no seguinte script <strong>[interfaces-01.php]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">require_once</span><span style="color:#008080"> </span>&quot;IExemple.php&quot;<span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">use</span><span style="color:#008080"> </span>\Exemples\Classe1;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">use</span><span style="color:#008080"> </span>\Exemples\Classe2;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">use</span><span style="color:#008080"> </span>\Exemples\IExemple;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// função</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">function</span><span style="color:#008080"> </span>calculer(<span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$a</span>,<span style="color:#008080"> </span><span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$b</span>,<span style="color:#008080"> </span>IExemple<span style="color:#008080"> </span><span style="color:#0000ff">$interface</span>) : void<span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">print</span><span style="color:#008080"> </span><span style="color:#0000ff">$interface</span>-&gt;ajouter(<span style="color:#0000ff">$a</span>,<span style="color:#008080"> </span><span style="color:#0000ff">$b</span>).<span style="color:#008000">&quot;\n&quot;</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">print</span><span style="color:#008080"> </span><span style="color:#0000ff">$interface</span>-&gt;soustraire(<span style="color:#0000ff">$a</span>,<span style="color:#008080"> </span><span style="color:#0000ff">$b</span>).<span style="color:#008000">&quot;\n&quot;</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// ------------------- hand</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// creation of 2 objects of type Class1 and Class2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// ------------------- main</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// criação de 2 objetos do tipo Classe1 e Classe2</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$c1</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span><span style="font-weight:bold">new</span><span style="color:#008080"> </span>Classe1();</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$c2</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span><span style="font-weight:bold">new</span><span style="color:#008080"> </span>Classe2();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call the calculate function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// chamada da função «calcular»</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">calculer(<span style="color:#000080">4</span>,<span style="color:#008080"> </span><span style="color:#000080">3</span>,<span style="color:#008080"> </span><span style="color:#0000ff">$c1</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">calculer(<span style="color:#000080">14</span>,<span style="color:#008080"> </span><span style="color:#000080">13</span>,<span style="color:#008080"> </span><span style="color:#0000ff">$c2</span>);</span></span>
 </code></pre></div>
 
 <p><strong>Comentários</strong></p>
 <ul>
-  <li>linhas 3–6: inclusão e definição das classes e interfaces utilizadas pelo script;
+  <li>linhas 3-6: inclusão e definição das classes e interfaces utilizadas pelo script;
   </li>
-  <li>linha 3: em vez da instrução <b>include</b>, utilizámos aqui a instrução <b>require_once</b>. A instrução <b>include </b>inclui um ficheiro no script atual mesmo que já tenha sido incluído, enquanto a instrução <b>require_once </b>o inclui apenas uma vez. Por isso, quando se trata de incluir código, preferimos a instrução <b>require_once</b>;
+  <li>linha 3: em vez da instrução <b>«include», </b>utilizámos aqui a instrução <b>«require_once</b>». A instrução <b>«include» </b>inclui um ficheiro no script atual, mesmo que este já tenha sido incluído, enquanto a instrução <b>«require_once» </b>só o inclui uma vez. Por isso, no que diz respeito à inclusão de código, é preferível utilizar a instrução <b>«require_once»</b>;
   </li>
-  <li>Linhas 9–12: definimos uma função;
+  <li>linhas 9-12: define-se uma função;
   </li>
-  <li>Linha 9: Aqui, declaramos os tipos dos três parâmetros. Se, em tempo de execução, o parâmetro real não for do tipo esperado, é lançado um erro. O terceiro parâmetro é do tipo <b>[IExample]</b>. Isto significa que o parâmetro real deve ser uma instância de uma classe que implemente a interface<b> [IExample]</b>; no nosso exemplo, isto significa uma instância das classes <b>[Class1] </b>ou <b>[Class2]</b>;
+  <li>linha 9: declaramos aqui o tipo dos três parâmetros. Se, durante a execução, o parâmetro efetivo não for do tipo esperado, é lançado um erro. O terceiro parâmetro é do tipo <b>[IExemple]</b>. Isto significa que o parâmetro efetivo deve ser uma instância de uma classe que implemente a interface <b>[IExemple]</b>; portanto, no nosso exemplo, uma instância das classes <b>[Classe1] </b>ou <b>[Classe2]</b>;
   </li>
-  <li>Linhas 10–11: Utilizamos os métodos<b> [add, subtract] </b>da interface<b> [IExample]</b>;
+  <li>linhas 10-11: utilizamos os métodos <b>[ajouter, soustraire] </b>da interface <b>[IExemple]</b>;
   </li>
-  <li>linha 19: o terceiro parâmetro real é do tipo <b>[Class1], que é </b>compatível com o tipo<b> [IExample] </b>do terceiro parâmetro formal da função;
+  <li>linha 19: o terceiro parâmetro efetivo é do tipo <b>[Classe1], </b>compatível com o tipo <b>[IExemple] </b>do terceiro parâmetro formal da função;
   </li>
-  <li>linha 20: o mesmo se aplica à classe<b> [Class2]</b>;
+  <li>linha 20: o mesmo se aplica à classe <b>[Classe2]</b>;
   </li>
 </ul>
 
@@ -1172,85 +1174,85 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>127
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>201
 </code></pre></div></td></tr></table></div>
-<p><a id="toc42690262"></a>
-<a id="toc42689876"></a>
-<a id="refheadingtoc55575710956990"></a>
-<a id="toc42690648"></a></p>
-<h2 id="63-derivacao-de-uma-interface">6.3. <span style="color: #4f81bd">Derivação de uma interface</span></h2>
-<p>Tal como uma classe filha pode estender uma classe pai, uma interface filha pode estender uma interface pai.</p>
-<p>Considere a interface <strong>[IExample2]</strong> definida no ficheiro <strong>[IExample2.php]</strong>:</p>
+<p><span id="toc42690262" name="toc42690262" class="odt-bookmark-anchor"></span>
+<span id="toc42690648" name="toc42690648" class="odt-bookmark-anchor"></span>
+<span id="refheadingtoc55575710956990" name="refheadingtoc55575710956990" class="odt-bookmark-anchor"></span>
+<span id="toc42689876" name="toc42689876" class="odt-bookmark-anchor"></span></p>
+<h2 id="63-derivacao-de-uma-interface">6.3. <span style="color: #4f81bd"><strong>Derivação de uma interface</strong></span></h2>
+<p>Da mesma forma que uma classe filha pode herdar de uma classe pai, uma interface filha pode herdar de uma interface pai.</p>
+<p>Consideremos a interface <strong>[IExemple2]</strong> definida no ficheiro <strong>[IExemple2.php]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// strict adherence to function parameter types</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// respeito rigoroso pelos tipos dos parâmetros das funções</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">declare</span>(strict_types=<span style="color:#000080">1</span>);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// namespace</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// espaço de nomes</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">namespace</span><span style="color:#008080"> </span>Exemples;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// interface definition IExemple included</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// inclusão da definição da interface IExemple</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">require_once<span style="color:#008080"> </span>__DIR__.<span style="color:#008000">&quot;/IExemple.php&quot;</span>;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// an interface derived from IExemple</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// uma interface que deriva de IExemple</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">interface</span><span style="color:#008080"> </span>IExemple2<span style="color:#008080"> </span><span style="font-weight:bold">extends</span><span style="color:#008080"> </span>IExemple<span style="color:#008080"> </span>{</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// the interface method</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// o método da interface</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>multiplier(<span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span>,<span style="color:#008080"> </span><span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$j</span>):<span style="color:#008080"> </span><span style="font-weight:bold">int</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// implementation of IExemple2 interface</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// implementação da interface IExemple2</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">class</span><span style="color:#008080"> </span>Classe3<span style="color:#008080"> </span><span style="font-weight:bold">extends</span><span style="color:#008080"> </span>Classe2<span style="color:#008080"> </span><span style="font-weight:bold">implements</span><span style="color:#008080"> </span>IExemple2<span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>multiplier(<span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$a</span>,<span style="color:#008080"> </span><span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$b</span>):<span style="color:#008080"> </span><span style="font-weight:bold">int</span><span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="font-weight:bold;color:#000000">return</span> <span style="color:#0000ff">$a</span> <span style="color:#000000">*</span> <span style="color:#0000ff">$b</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">}</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p><strong><span style="color: #000000">Comentários</span></strong></p>
 <ul>
-  <li><span style="color: #000000">linha 6: a interface </span><b><span style="color: #000000">[IExample2] </span></b><span style="color: #000000">estará no mesmo namespace que a interface </span><b><span style="color: #000000">[Iexample]</span></b><span style="color: #000000">;</span>
+  <li><span style="color: #000000">linha 6: a interface </span><b><span style="color: #000000">[IExemple2] </span></b><span style="color: #000000">estará no mesmo espaço de nomes que a interface </span><b><span style="color: #000000">[Iexemple]</span></b><span style="color: #000000">;</span>
   </li>
-  <li><span style="color: #000000">linha 9: o ficheiro de definição da interface</span><b><span style="color: #000000"> [Iexample] </span></b><span style="color: #000000">é incluído;</span>
+  <li><span style="color: #000000">linha 9: inclui-se o ficheiro de definição da interface </span><b><span style="color: #000000">[Iexemple]</span></b><span style="color: #000000">;</span>
   </li>
-  <li><span style="color: #000000">linhas 12–15: definem a interface </span><b><span style="color: #000000">[IExample2]</span></b><span style="color: #000000">, que estende (herda </span><b><span style="color: #000000">de</span></b><span style="color: #000000">) a interface </span><b><span style="color: #000000">[IExample] </span></b><span style="color: #000000">e adiciona um novo método a ela (linha 14);</span>
+  <li><span style="color: #000000">linhas 12-15: definem a interface </span><b><span style="color: #000000">[IExemple2]</span></b><span style="color: #000000">, que estende (herda) a interface </span><b><span style="color: #000000">[Iexemple] </span></b><span style="color: #000000">e lhe adiciona um novo método (linha 14);</span>
   </li>
-  <li><span style="color: #000000">linhas 18–24: a classe </span><b><span style="color: #000000">[Class3] </span></b><span style="color: #000000">estende a classe </span><b><span style="color: #000000">[Class2]</span></b><span style="color: #000000">. Uma vez que [Class2] implementa a interface </span><b><span style="color: #000000">[IExample]</span></b><span style="color: #000000">, </span><b><span style="color: #000000">[Class3] </span></b><span style="color: #000000">também a implementará. Na verdade, </span><b><span style="color: #000000">[Class3] </span></b><span style="color: #000000">herda todos os métodos públicos e protegidos da classe</span><b><span style="color: #000000"> [Class2]</span></b><span style="color: #000000">, incluindo os métodos </span><b><span style="color: #000000">add </span></b><span style="color: #000000">e </span><b><span style="color: #000000">subtract</span></b><span style="color: #000000">. Além disso, especificamos que </span><b><span style="color: #000000">[Class3] </span></b><span style="color: #000000">implementa a interface</span><b><span style="color: #000000"> [IExample2]</span></b><span style="color: #000000">. Como tal, deve também implementar o método </span><b><span style="color: #000000">multiply</span></b><span style="color: #000000">, o que </span><b><span style="color: #000000">[Class2] </span></b><span style="color: #000000">não faz. É isso que as linhas 20–22 fazem;</span>
+  <li><span style="color: #000000">linhas 18-24: a classe </span><b><span style="color: #000000">[Classe3] </span></b><span style="color: #000000">estende a classe </span><b><span style="color: #000000">[Classe2]</span></b><span style="color: #000000">. Como esta implementa a interface </span><b><span style="color: #000000">[IExemple]</span></b><span style="color: #000000">, o mesmo se aplica à classe </span><b><span style="color: #000000">[Classe3]</span></b><span style="color: #000000">. Com efeito, </span><b><span style="color: #000000">a [Classe3] </span></b><span style="color: #000000">herda todos os métodos públicos e protegidos da classe </span><b><span style="color: #000000">[Classe2]</span></b><span style="color: #000000">, incluindo, portanto, os métodos </span><b><span style="color: #000000">«adicionar» </span></b><span style="color: #000000">e </span><b><span style="color: #000000">«subtrair</span></b><span style="color: #000000">». Além disso, indica-se que </span><b><span style="color: #000000">a classe [Classe3] </span></b><span style="color: #000000">implementa a interface </span><b><span style="color: #000000">[IExemple2]</span></b><span style="color: #000000">. Nessa qualidade, deve também implementar o método </span><b><span style="color: #000000">«multiplicar»</span></b><span style="color: #000000">, o que </span><b><span style="color: #000000">a classe [Classe2]</span></b><span style="color: #000000"> não faz. É isso que as linhas 20-22 fazem;</span>
   </li>
 </ul>
 
-<p><span style="color: #000000">A interface</span><strong><span style="color: #000000"> [IExample2] </span></strong><span style="color: #000000">é utilizada pelo seguinte script</span><strong><span style="color: #000000"> [interfaces-02]</span></strong><span style="color: #000000">:</span></p>
+<p><span style="color: #000000">A interface </span><strong><span style="color: #000000">[IExemple2] </span></strong><span style="color: #000000">é utilizada pelo seguinte script </span><strong><span style="color: #000000">[interfaces-02]</span></strong><span style="color: #000000">:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// strict adherence to function parameter types</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// respeito rigoroso pelos tipos dos parâmetros das funções</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">declare</span>(strict_types=<span style="color:#000080">1</span>);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// inclusion and qualification of classes and interfaces required by the script</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// inclusão e qualificações das classes e interfaces necessárias ao script</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">require_once</span><span style="color:#008080"> </span><span style="font-weight:bold">__DIR__</span>.<span style="color:#008000">&quot;/Iexemple2.php&quot;</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">use</span><span style="color:#008080"> </span>\Exemples\IExemple2;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">use</span><span style="color:#008080"> </span>\Exemples\Classe3;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// função</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">function</span><span style="color:#008080"> </span>calculer(<span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$a</span>,<span style="color:#008080"> </span><span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$b</span>,<span style="color:#008080"> </span>IExemple2<span style="color:#008080"> </span><span style="color:#0000ff">$interface</span>)<span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold">print</span><span style="color:#008080"> </span><span style="color:#0000ff">$interface</span>-&gt;ajouter(<span style="color:#0000ff">$a</span>,<span style="color:#008080"> </span><span style="color:#0000ff">$b</span>)<span style="color:#008080"> </span>.<span style="color:#008080"> </span><span style="color:#008000">&quot;\n&quot;</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold">print</span><span style="color:#008080"> </span><span style="color:#0000ff">$interface</span>-&gt;soustraire(<span style="color:#0000ff">$a</span>,<span style="color:#008080"> </span><span style="color:#0000ff">$b</span>)<span style="color:#008080"> </span>.<span style="color:#008080"> </span><span style="color:#008000">&quot;\n&quot;</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold">print</span><span style="color:#008080"> </span><span style="color:#0000ff">$interface</span>-&gt;multiplier(<span style="color:#0000ff">$a</span>,<span style="color:#008080"> </span><span style="color:#0000ff">$b</span>)<span style="color:#008080"> </span>.<span style="color:#008080"> </span><span style="color:#008000">&quot;\n&quot;</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// ------------------- hand</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// creation of 1 Class3 object implementing IExemple2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// ------------------- main</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// criação de 1 objeto do tipo Classe3 que implementa IExemple2</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$c3</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span><span style="font-weight:bold">new</span><span style="color:#008080"> </span>Classe3();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call the calculate function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// chamada à função «calcular»</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">calculer(<span style="color:#000080">4</span>,<span style="color:#008080"> </span><span style="color:#000080">3</span>,<span style="color:#008080"> </span><span style="color:#0000ff">$c3</span>);</span></span>
 </code></pre></div>
 
 <p><strong><span style="color: #000000">Comentários</span></strong></p>
 <ul>
-  <li><span style="color: #000000">linha 12: o terceiro parâmetro da função</span><b><span style="color: #000000"> [calculate] </span></b><span style="color: #000000">é do tipo </span><b><span style="color: #000000">[IExample2]</span></b><span style="color: #000000">;</span>
+  <li><span style="color: #000000">linha 12: o terceiro parâmetro da função </span><b><span style="color: #000000">[calculer] </span></b><span style="color: #000000">é do tipo </span><b><span style="color: #000000">[IExemple2]</span></b><span style="color: #000000">;</span>
   </li>
-  <li><span style="color: #000000">linhas 13–15: são utilizados os três métodos da interface</span><b><span style="color: #000000"> [IExample2]</span></b><span style="color: #000000">;</span>
+  <li><span style="color: #000000">linhas 13-15: utilizam-se os três métodos da interface </span><b><span style="color: #000000">[IExemple2]</span></b><span style="color: #000000">;</span>
   </li>
-  <li><span style="color: #000000">linha 22: a função</span><b><span style="color: #000000"> [calculate] </span></b><span style="color: #000000">é chamada com um objeto do tipo </span><b><span style="color: #000000">[IExample2] </span></b><span style="color: #000000">como terceiro parâmetro (linha 20);</span>
+  <li><span style="color: #000000">linha 22: chama-se a função </span><b><span style="color: #000000">[calculer] </span></b><span style="color: #000000">com, como terceiro parâmetro, um objeto do tipo </span><b><span style="color: #000000">[IExemple2] </span></b><span style="color: #000000">(linha 20);</span>
   </li>
 </ul>
 
@@ -1261,44 +1263,44 @@
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>201
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a>12
 </code></pre></div></td></tr></table></div>
-<p><a id="toc42690263"></a>
-<a id="toc42689877"></a>
-<a id="refheadingtoc55577710956990"></a>
-<a id="toc42690649"></a></p>
-<h2 id="64-passar-uma-interface-como-parametro-de-funcao">6.4. <span style="color: #4f81bd">Passar uma interface como parâmetro de função</span></h2>
-<p>Vimos <a href="#passagedunobjet"><u><span style="color: #0563c1">na secção anterior</span></u></a> que, quando o tipo esperado para um parâmetro de função é uma classe, o parâmetro real pode ser um objeto do tipo esperado <strong>ou de um tipo derivado</strong>. O mesmo se aplica às interfaces, como mostrado no seguinte script <strong>[interfaces-03.php]</strong>:</p>
+<p><span id="toc42690263" name="toc42690263" class="odt-bookmark-anchor"></span>
+<span id="toc42690649" name="toc42690649" class="odt-bookmark-anchor"></span>
+<span id="refheadingtoc55577710956990" name="refheadingtoc55577710956990" class="odt-bookmark-anchor"></span>
+<span id="toc42689877" name="toc42689877" class="odt-bookmark-anchor"></span></p>
+<h2 id="64-passagem-de-uma-interface-como-parametro-de-uma-funcao">6.4. <span style="color: #4f81bd">Passagem de uma interface como parâmetro de uma função</span></h2>
+<p>Vimos no <a href="as-classes.html#passagedunobjet"><u><span style="color: #0563c1">parágrafo</span></u></a> anterior que, quando o tipo esperado para um parâmetro de função é uma classe, o parâmetro efetivo pode ser um objeto do tipo esperado <strong>ou derivado</strong>. O mesmo se aplica às interfaces, como mostra o seguinte script <strong>[interfaces-03.php]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// strict adherence to function parameter types</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// respeito rigoroso pelos tipos dos parâmetros das funções</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">declare</span>(strict_types=<span style="color:#000080">1</span>);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// inclusion and qualification of classes and interfaces required by the script</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// inclusão e qualificações das classes e interfaces necessárias ao script</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">require_once<span style="color:#008080"> </span>__DIR__.<span style="color:#008000">&quot;/IExemple.php&quot;</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">use</span><span style="color:#008080"> </span>\Exemples\IExemple;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">require_once</span><span style="color:#008080"> </span><span style="font-weight:bold">__DIR__</span>.<span style="color:#008000">&quot;/IExemple2.php&quot;</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">use</span><span style="color:#008080"> </span>\Exemples\Classe3;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// função</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">function</span><span style="color:#008080"> </span>calculer(<span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$a</span>,<span style="color:#008080"> </span><span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$b</span>,<span style="color:#008080"> </span>IExemple<span style="color:#008080"> </span><span style="color:#0000ff">$interface</span>)<span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">print</span><span style="color:#008080"> </span><span style="color:#0000ff">$interface</span>-&gt;ajouter(<span style="color:#0000ff">$a</span>,<span style="color:#008080"> </span><span style="color:#0000ff">$b</span>)<span style="color:#008080"> </span>.<span style="color:#008080"> </span><span style="color:#008000">&quot;\n&quot;</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">print</span><span style="color:#008080"> </span><span style="color:#0000ff">$interface</span>-&gt;soustraire(<span style="color:#0000ff">$a</span>,<span style="color:#008080"> </span><span style="color:#0000ff">$b</span>)<span style="color:#008080"> </span>.<span style="color:#008080"> </span><span style="color:#008000">&quot;\n&quot;</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// ------------------- hand</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// creation of 1 object of type Class3 which implements IExemple2 and therefore IExemple</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// ------------------- main</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// criação de 1 objeto do tipo Classe3 que implementa IExemple2 e, portanto, IExemple</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$c3</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span><span style="font-weight:bold">new</span><span style="color:#008080"> </span>Classe3();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// call the calculate function</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// chamada à função «calcular»</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">calculer(<span style="color:#000080">4</span>,<span style="color:#008080"> </span><span style="color:#000080">3</span>,<span style="color:#008080"> </span><span style="color:#0000ff">$c3</span>);</span></span>
 </code></pre></div>
 
 <p><strong>Comentários</strong></p>
 <ul>
-  <li>linha 13: a função<b> [calculate] </b>espera um tipo <b>[IExample] </b>como seu terceiro parâmetro. Isto significa que o tipo do parâmetro real pode ser <b>[IExample] ou </b>um tipo<b> derivado</b>;
+  <li>na linha 13, a função <b>[calculer] </b>espera, como terceiro parâmetro, um tipo <b>[IExemple]</b>. Isto significa que o tipo do parâmetro efetivo poderá ser do tipo <b>[IExemple] ou derivado</b>;
   </li>
-  <li>linha 20: instanciamos um objeto <b>$c3 </b>do tipo <b>[Class3]</b>, uma classe que implementa a interface <b>[IExample2]</b>, que por sua vez estende a interface <b>[IExample]</b>. Portanto, em última análise, <b>$c3 </b>implementa a interface <b>[IExample]</b>;
+  <li>linha 20: instanciamos um objeto $c3 do tipo <b>[Classe3]</b>, classe que implementa a interface <b>[IExemple2], </b>que por sua vez estende a interface <b>[IExemple]</b>. Portanto, em última análise, $c3 implementa a interface <b>[IExemple]</b>;
   </li>
-  <li>linha 22: chamamos a função <b>[calculate] </b>com um objeto <b>$c3 </b>do tipo <b>[Class3] </b>como terceiro parâmetro. Através da interação entre herança de classes e implementações, vimos que o objeto <b>$c3 </b>implementa o tipo <b>[IExample]</b>. Podemos, portanto, usá-lo como terceiro parâmetro;
+  <li>linha 22: chama-se a função <b>[calculer] </b>com, como terceiro parâmetro, um objeto $c3 do tipo <b>[Classe3]</b>. Através da herança de classes e das implementações, verificámos que o objeto $c3 implementava o tipo <b>[IExemple]</b>. Por isso, podemos utilizá-lo como terceiro parâmetro;
   </li>
 </ul>
 

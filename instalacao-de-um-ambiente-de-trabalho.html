@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/pt-php7-juillet-2019/introducao-ao-php-7.html">
+        <link rel="canonical" href="https://stahe.github.io/pt-php7-juillet-2019/instalacao-de-um-ambiente-de-trabalho.html">
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="introducao-a-linguagem-php-7.html">
       
       
-        <link rel="next" href="configurar-um-ambiente-de-desenvolvimento.html">
+        <link rel="next" href="nocoes-basicas-do-php.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>1. Introdução ao PHP 7 - Uma introdução ao PHP7 através de exemplos</title>
+        <title>2. Instalação de um ambiente de trabalho - Uma introdução ao PHP7 através de exemplos</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-introducao-ao-php-7" class="md-skip">
+        <a href="#2-instalacao-de-um-ambiente-de-trabalho" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. Introdução ao PHP 7
+              2. Instalação de um ambiente de trabalho
             
           </span>
         </div>
@@ -300,6 +302,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="introducao-a-linguagem-php-7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introdução à linguagem PHP 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -312,14 +341,32 @@
         
       
       
-      <a href="introducao-ao-php-7.html" class="md-nav__link md-nav__link--active">
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Instalação de um ambiente de trabalho
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="instalacao-de-um-ambiente-de-trabalho.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Introdução ao PHP 7
+    2. Instalação de um ambiente de trabalho
   
 
     
@@ -328,6 +375,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-instalacao-do-laragon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Instalação do Laragon
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-instalacao-do-ide-netbeans-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Instalação do IDE NetBeans 10.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -340,41 +428,14 @@
   
   
     <li class="md-nav__item">
-      <a href="configurar-um-ambiente-de-desenvolvimento.html" class="md-nav__link">
+      <a href="nocoes-basicas-do-php.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. Configurar um ambiente de desenvolvimento
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="os-conceitos-basicos-do-php.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    3. Os conceitos básicos do PHP
+    3. Noções básicas do PHP
   
 
     
@@ -401,7 +462,7 @@
   <span class="md-ellipsis">
     
   
-    4. Exercício Prático – Versões 1 e 2
+    4. Exercício prático – versões 1 e 2
   
 
     
@@ -421,14 +482,14 @@
   
   
     <li class="md-nav__item">
-      <a href="classes.html" class="md-nav__link">
+      <a href="as-classes.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Classes
+    5. As classes
   
 
     
@@ -448,14 +509,14 @@
   
   
     <li class="md-nav__item">
-      <a href="interfaces.html" class="md-nav__link">
+      <a href="as-interfaces.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Interfaces
+    6. As interfaces
   
 
     
@@ -509,7 +570,7 @@
   <span class="md-ellipsis">
     
   
-    8. Exercício prático – Versão 3
+    8. Exercício prático – versão 3
   
 
     
@@ -529,14 +590,14 @@
   
   
     <li class="md-nav__item">
-      <a href="traits.html" class="md-nav__link">
+      <a href="os-traits.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. Traits
+    9. Os Traits
   
 
     
@@ -590,7 +651,7 @@
   <span class="md-ellipsis">
     
   
-    11. Exercício Prático – Versão 4
+    11. Exercício prático – versão 4
   
 
     
@@ -644,7 +705,7 @@
   <span class="md-ellipsis">
     
   
-    13. Exercício prático – Versão 5
+    13. Exercício prático – versão 5
   
 
     
@@ -664,14 +725,14 @@
   
   
     <li class="md-nav__item">
-      <a href="exercicio-de-aplicacao---versao-6.html" class="md-nav__link">
+      <a href="exercicio-pratico---versao-6.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Exercício de Aplicação – Versão 6
+    14. Exercício prático – versão 6
   
 
     
@@ -691,14 +752,14 @@
   
   
     <li class="md-nav__item">
-      <a href="exercicio-de-aplicacao---versao-7.html" class="md-nav__link">
+      <a href="exercicio-pratico---versao-7.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. Exercício de aplicação – Versão 7
+    15. Exercício prático – versão 7
   
 
     
@@ -752,7 +813,7 @@
   <span class="md-ellipsis">
     
   
-    17. Serviços Web
+    17. Serviços web
   
 
     
@@ -779,7 +840,7 @@
   <span class="md-ellipsis">
     
   
-    18. Exercício prático – Versão 8
+    18. Exercício prático – versão 8
   
 
     
@@ -806,7 +867,7 @@
   <span class="md-ellipsis">
     
   
-    19. Exercício prático – Versão 9
+    19. Exercício prático – versão 9
   
 
     
@@ -826,14 +887,14 @@
   
   
     <li class="md-nav__item">
-      <a href="exercicio-da-aplicacao---versao-10.html" class="md-nav__link">
+      <a href="exercicio-pratico---versao-10.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    20. Exercício da Aplicação – Versão 10
+    20. Exercício prático – versão 10
   
 
     
@@ -880,14 +941,14 @@
   
   
     <li class="md-nav__item">
-      <a href="exercicio-de-aplicacao---versao-11.html" class="md-nav__link">
+      <a href="exercicio-pratico---versao-11.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    22. Exercício de Aplicação – Versão 11
+    22. Exercício prático – versão 11
   
 
     
@@ -914,7 +975,7 @@
   <span class="md-ellipsis">
     
   
-    23. Exercício Prático – Versão 12
+    23. Exercício prático – versão 12
   
 
     
@@ -934,14 +995,14 @@
   
   
     <li class="md-nav__item">
-      <a href="exercicio-da-aplicacao---versao-13.html" class="md-nav__link">
+      <a href="exercicio-pratico---versao-13.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    24. Exercício da Aplicação – Versão 13
+    24. Exercício prático – versão 13
   
 
     
@@ -971,59 +1032,175 @@
 
 
 
-<h1 id="1-introducao-ao-php-7">1. <span style="color: #365f91">Introdução ao PHP 7</span></h1>
-<p>O PDF deste documento está disponível |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQCDVLfsGnhrT4P2xH5q0kCPAfSbDpXRObPPiqMjpaPApbE?e=2UQj0t">AQUI</a>|.</p>
-<p>Os exemplos deste documento estão disponíveis |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQD9nIGSR5MPT6iedzBw3bO5Ac9hEN7zLzy--keIvQl_XBg?e=fRIEdC">AQUI</a>|.</p>
-<p>Este documento faz parte de uma série de quatro artigos:</p>
-<ol>
-  <li>[<a href="https://tahe.developpez.com/tutoriels-cours/php7"><u><span style="color: #0563c1">Introdução </span></u></a><a href="https://stahe.github.io/pt-php7-juillet-2019/"><u><span style="color: #000080">ao PHP 7 através de exemplos</span></u></a>]. <b>Este é o documento atual</b>;
-  </li>
-  <li>[<a href="https://tahe.developpez.com/tutoriels-cours/ecmascript6"><u><span style="color: #0563c1">Introdução </span></u></a><a href="https://stahe.github.io/pt-ecmascript6-oct-2019/"><u><span style="color: #000080">ao ECMASCRIPT 6 através de exemplos</span></u></a>];
-  </li>
-  <li>[<a href="https://tahe.developpez.com/tutoriels-cours/vuejs"><u><span style="color: #0563c1">Introdução </span></u></a><a href="https://tahe.developpez.com/tutoriels-cours/vuejs"><u><span style="color: #0563c1">ao framework VUE.</span></u></a><a href="https://stahe.github.io/pt-vuejs-oct-2019/"><u><span style="color: #000080">JS através de exemplos</span></u></a>];
-  </li>
-  <li>[<a href="https://tahe.developpez.com/tutoriels-cours/nuxtjs"><u><span style="color: #0563c1">Introdução </span></u></a><a href="https://tahe.developpez.com/tutoriels-cours/nuxtjs"><u><span style="color: #0563c1">ao </span></u></a><a href="https://stahe.github.io/en-nuxtjs-dec-2019/"><u><span style="color: #0563c1">framework </span></u></a><a href="https://stahe.github.io/pt-nuxtjs-dec-2019/"><u><span style="color: #000080">NUXT.</span></u><u><span style="color: #0563c1">NUXT.</span></u></a>];
-  </li>
-</ol>
-
-<p>Todos estes são documentos para <strong>principiantes</strong>. Os artigos seguem uma sequência lógica, mas <strong>estão vagamente interligados</strong>:</p>
+<p><span id="toc42690579" name="toc42690579" class="odt-bookmark-anchor"></span>
+<span id="toc42689807" name="toc42689807" class="odt-bookmark-anchor"></span>
+<span id="toc42690193" name="toc42690193" class="odt-bookmark-anchor"></span></p>
+<h1 id="2-instalacao-de-um-ambiente-de-trabalho">2. <span style="color: #365f91">Instalação de um ambiente de trabalho</span></h1>
+<p>Os scripts foram escritos e testados no seguinte ambiente:</p>
 <ul>
-  <li>o documento [1] apresenta a linguagem PHP 7. Os leitores interessados apenas em PHP e não no JavaScript abordado nos artigos seguintes devem parar por aqui;
+  <li>um ambiente de servidor web Apache / SGBD MySQL / PHP 7.3 denominado <b>Laragon;</b>
   </li>
-  <li>Os documentos [2–4] têm como objetivo construir um cliente JavaScript para o servidor de cálculo de impostos desenvolvido no documento [1];
-  </li>
-  <li>As estruturas JavaScript [Vue.js] e [Nuxt.js] nos artigos 3 e 4 requerem conhecimento das versões mais recentes do ECMAScript, especificamente a versão 6. O documento [2] destina-se, portanto, a quem não está familiarizado com esta versão do JavaScript. Refere-se ao servidor de cálculo de impostos criado no documento [1]. Os leitores do [2] terão, por isso, por vezes, de consultar o documento [1];
-  </li>
-  <li>Uma vez dominado o ECMASCRIPT 6, podemos avançar para o framework VUE.JS, que permite a criação de clientes JavaScript que funcionam num navegador no modo SPA (Single Page Application). Este é o documento [3]. Refere-se tanto ao servidor de cálculo de impostos construído no documento [1] como ao código do cliente JavaScript autónomo construído no [2]. Os leitores de [3] terão, portanto, por vezes, de consultar os documentos [1] e [2];
-  </li>
-  <li>Depois de dominar o VUE.JS, pode passar para o framework NUXT.JS, que permite construir clientes JavaScript que funcionam num navegador no modo SSR (Server Side Rendered). Refere-se ao servidor de cálculo de impostos construído no documento [1], ao código cliente JavaScript autónomo construído no [2] e à aplicação [vue.js] desenvolvida no documento [3]. Os leitores de [4] terão, portanto, de consultar ocasionalmente os documentos [1], [2] e [3];
+  <li>o ambiente de desenvolvimento <b>NetBeans 10.0 </b>IDE<b>;</b>
   </li>
 </ul>
 
-<p>Este documento fornece uma lista de <strong>scripts de consola</strong> PHP 7 em várias áreas (estruturas de linguagem, acesso a ficheiros, acesso a bases de dados e acesso à rede da Internet). A programação web é abordada através de <strong>serviços web</strong>. Neste documento, referimo-nos a qualquer aplicação web que produza texto simples como um serviço web. Trata-se de servidores de dados, não de servidores de páginas web, que são uma mistura de HTML, CSS e JavaScript. Abordamos conceitos web clássicos (protocolo HTTP, respostas JSON ou XML, gestão de sessões, autenticação) também utilizados na programação web tradicional.</p>
-<p>Atualmente, é comum construir aplicações web no modo cliente/servidor:</p>
-<p><img src="images/100000000000082800000365F64BD6A3.png" width="626" height="261" style="width:16.572cm;height:6.897cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000082800000365F64BD6A3.png" /></p>
+<p><span id="refheadingtoc45843531951845" name="refheadingtoc45843531951845" class="odt-bookmark-anchor"></span>
+<span id="toc42689808" name="toc42689808" class="odt-bookmark-anchor"></span>
+<span id="toc42690194" name="toc42690194" class="odt-bookmark-anchor"></span>
+<span id="toc42690580" name="toc42690580" class="odt-bookmark-anchor"></span>
+<span id="installationdelaragon" name="installationdelaragon" class="odt-bookmark-anchor"></span></p>
+<h2 id="21-instalacao-do-laragon">2.1. <span style="color: #4f81bd">Instalação do Laragon</span></h2>
+<p>O Laragon é um pacote que reúne vários programas:</p>
 <ul>
-  <li>em <b>[1]</b>, o navegador da Web apresenta páginas Web destinadas a um utilizador <b>[5, 7]</b>. Estas páginas contêm JavaScript que implementa um cliente para um serviço Web de dados <b>[2]</b>, bem como um cliente para um servidor de fragmentos de páginas Web <b>[3]</b>. Uma estrutura JS bem estabelecida neste campo é <b>o Angular 2 </b>da Google (maio de 2019);
+  <li>um servidor web Apache. Iremos utilizá-lo para escrever scripts web em PHP;
   </li>
-  <li>em <b>[2]</b>, o servidor web é um servidor de dados. Pode ser escrito em qualquer linguagem. Não gera páginas web no sentido tradicional (HTML, CSS, JavaScript), exceto talvez na primeira vez. Mas esta primeira página pode ser obtida a partir de um servidor web tradicional <b>[3] </b>(não um servidor de dados). O JavaScript na página inicial irá então gerar as várias páginas web da aplicação, recuperando os dados <b>[4] </b>a serem exibidos do servidor web, que atua como um servidor de dados <b>[2]</b>. Também pode recuperar fragmentos de páginas web <b>[5] </b>para formatar esses dados a partir do servidor de páginas web <b>[3]</b>;
+  <li>o SGBD MySQL;
   </li>
-  <li>em <b>[4]</b>, o utilizador inicia uma ação;
+  <li>a linguagem de script PHP;
   </li>
-  <li>em <b>[6,7]</b>: recebe dados formatados por um fragmento de página web;
+  <li>um servidor Redis que implementa um cache para aplicações web:
   </li>
 </ul>
 
-<p>Neste documento, iremos escrever aplicações cliente/servidor em PHP 7 com a seguinte estrutura:</p>
-<p><img src="images/10000000000006A800000291FCA421D9.png" width="596" height="230" style="width:15.782cm;height:6.085cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006A800000291FCA421D9.png" /></p>
-<p>Aqui temos uma aplicação cliente/servidor escrita em PHP. Um script de consola <strong>[9]</strong> irá consultar um servidor de dados <strong>[4]</strong>. O conhecimento adquirido aqui para escrever o serviço de dados pode ser reutilizado numa aplicação web. O serviço de dados em PHP pode ser mantido, e o cliente PHP será substituído por um cliente JavaScript.</p>
-<p>Como tema central deste documento, iremos construir um serviço de cálculo de impostos em 13 versões. A versão 13 terá a seguinte arquitetura:</p>
-<p><img src="images/100000000000072E0000021F81624F47.png" width="643" height="190" style="width:17.022cm;height:5.029cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000072E0000021F81624F47.png" /></p>
-<p>A camada <strong>[web]</strong> do servidor terá uma arquitetura MVC (Modelo–Visão–Controlador). Todo o curso de PHP 7 tem como objetivo a criação desta versão.</p>
-<p>Os scripts neste documento estão comentados e a sua saída na consola é reproduzida. São fornecidas explicações adicionais sempre que necessário. Este documento requer uma leitura ativa: para compreender um script, é necessário ler o seu código, os comentários e os resultados da execução.</p>
-<p>Os exemplos deste documento estão disponíveis <strong>|aqui|</strong>.</p>
-<p>O PDF do documento pode ser encontrado <strong>|aqui|</strong>.</p>
-<p>Serge Tahé, julho de 2019</p>
+<p>O Laragon pode ser descarregado (março de 2019) na seguinte morada:</p>
+<p><a href="https://laragon.org/download/"><u><span style="color: #0563c1">https://laragon.org/download/</span></u></a></p>
+<p><img src="images/10000000000005AC000003184BDF25EA.png" width="363" height="198" style="width:9.603cm;height:5.241cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005AC000003184BDF25EA.png" /></p>
+<p><img src="images/100000000000086200000337E13872C5.png" width="536" height="206" style="width:14.19cm;height:5.442cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000086200000337E13872C5.png" /></p>
+<p><img src="images/100000000000088C0000033343F79C47.png" width="547" height="205" style="width:14.469cm;height:5.42cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000088C0000033343F79C47.png" /></p>
+<ul>
+  <li>A instalação <b>[1-5] </b>gera a seguinte estrutura de diretórios:
+  </li>
+</ul>
+
+<p><img src="images/100000000000083D000003996FDD348B.png" width="633" height="276" style="width:16.739cm;height:7.31cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000083D000003996FDD348B.png" /></p>
+<ul>
+  <li>em <b>[6], </b>a pasta de instalação de PHP;
+  </li>
+</ul>
+
+<p>Ao iniciar o <strong>[Laragon],</strong> é apresentada a seguinte janela:</p>
+<p><img src="images/10000000000004F800000346ED7C4AFF.png" width="382" height="251" style="width:10.102cm;height:6.652cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004F800000346ED7C4AFF.png" /></p>
+<ul>
+  <li><b>[1]</b>: o menu principal do Laragon;
+  </li>
+  <li><b>[2]</b>: o botão <b>[Start All] </b>inicia o servidor web Apache e o SGBD MySQL;
+  </li>
+  <li><b>[3]</b>: o botão <b>[WEB] </b>apresenta a página web <b>[http://localhost], </b>que corresponde ao ficheiro PHP <b>[&lt;laragon&gt;/www/index.php], </b>em que &lt;laragon&gt; é a pasta de instalação do Laragon;
+  </li>
+  <li><b>[4]</b>: o botão <b>[Database] </b>permite gerir o SGBD e o MySQL com a ferramenta <b>[phpMyAdmin]</b>. É necessário instalar esta ferramenta previamente;
+  </li>
+  <li><b>[5]</b>: o botão <b>[Terminal] </b>abre um terminal de comandos;
+  </li>
+  <li><b>[6]</b>: o botão <b>[Root] </b>abre o Explorador do Windows com a pasta <b>[&lt;laragon&gt;/www]</b> selecionada, que é a raiz do site <b>[http://localhost]</b>. É aqui que devem ser colocadas todas as aplicações web geridas pelo servidor Apache do Laragon;
+  </li>
+</ul>
+
+<p>Vamos abrir um terminal Laragon <strong>[5]</strong>:</p>
+<p><img src="images/1000000000000745000002AC1D4C0E92.png" width="558" height="205" style="width:14.773cm;height:5.429cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000745000002AC1D4C0E92.png" /></p>
+<ul>
+  <li>em <b>[1]</b>, o tipo de terminal. Estão disponíveis três tipos de terminais em <b>[6]</b>;
+  </li>
+  <li>em <b>[2, 3]</b>: a pasta atual;
+  </li>
+  <li>em <b>[4]</b>, introduz-se o comando <b>[echo %PATH%], </b>que apresenta a lista de pastas exploradas durante a procura de um executável. Todas as pastas principais do Laragon estão incluídas neste caminho dos executáveis, o que não aconteceria se abríssemos uma janela de comandos <b>[cmd] </b>no Windows. Neste documento, quando for necessário introduzir comandos para instalar um determinado software, esses comandos são geralmente introduzidos num terminal do Laragon;
+  </li>
+</ul>
+
+<p><span id="refheadingtoc45845531951845" name="refheadingtoc45845531951845" class="odt-bookmark-anchor"></span>
+<span id="toc42689809" name="toc42689809" class="odt-bookmark-anchor"></span>
+<span id="toc42690195" name="toc42690195" class="odt-bookmark-anchor"></span>
+<span id="toc42690581" name="toc42690581" class="odt-bookmark-anchor"></span>
+<span id="installationdelide" name="installationdelide" class="odt-bookmark-anchor"></span></p>
+<h2 id="22-instalacao-do-ide-netbeans-100">2.2. <span style="color: #4f81bd">Instalação do IDE NetBeans 10.0</span></h2>
+<p>O IDE NetBeans 10.0 pode ser descarregado na seguinte morada (março de 2019):</p>
+<p><a href="https://netbeans.apache.org/download/index.html"><u><span style="color: #0563c1">https://netbeans.apache.org/download/index.HTML</span></u></a></p>
+<p><img src="images/10000000000007BD0000037EBD90F9D8.png" width="495" height="223" style="width:13.1cm;height:5.913cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007BD0000037EBD90F9D8.png" /></p>
+<p>O ficheiro descarregado é um ficheiro zip que basta descompactar. Depois de instalar e iniciar o NetBeans, é possível criar um primeiro projeto PHP.</p>
+<p><img src="images/10000000000005C4000001A8D40DAF59.png" width="443" height="127" style="width:11.719cm;height:3.373cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005C4000001A8D40DAF59.png" /></p>
+<ul>
+  <li>em <b>[1]</b>, selecione a opção «File / New Project»;
+  </li>
+  <li>no <b>[2]</b>, selecione a categoria <b>[PHP]</b>;
+  </li>
+  <li>no <b>[3]</b>, selecione o tipo de projeto <b>[PHP Application]</b>;
+  </li>
+</ul>
+
+<p><img src="images/100000000000085A000001CEB2D6C5E9.png" width="641" height="139" style="width:16.97cm;height:3.671cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000085A000001CEB2D6C5E9.png" /></p>
+<ul>
+  <li>em <b>[4]</b>, atribuir um nome ao projeto;
+  </li>
+  <li>em <b>[5]</b>, escolha uma pasta para o projeto;
+  </li>
+  <li>em <b>[6]</b>, selecione a versão do PHP que descarregou;
+  </li>
+  <li>em <b>[7]</b>, selecione a codificação UTF-8 para os ficheiros PHP;
+  </li>
+  <li>em <b>[8]</b>, selecione o modo <b>[Script] </b>para executar os scripts PHP no modo de linha de comandos. Selecione <b>[Local WEB Server] </b>para executar um script PHP num ambiente web;
+  </li>
+  <li>no <b>[9,10]</b>, indicar o diretório de instalação do interpretador PHP do pacote Laragon:
+  </li>
+</ul>
+
+<p><img src="images/10000000000005DC0000025C1FB2220C.png" width="450" height="181" style="width:11.912cm;height:4.791cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DC0000025C1FB2220C.png" /></p>
+<ul>
+  <li>selecione <b>[Finish] </b>para concluir o assistente de criação do projeto PHP;
+  </li>
+</ul>
+
+<p><img src="images/100000000000070C0000020CD9C9D0E3.png" width="541" height="157" style="width:14.319cm;height:4.159cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000070C0000020CD9C9D0E3.png" /></p>
+<ul>
+  <li>em <b>[11]</b>, o projeto é criado com um script <b>[index.php]</b>;
+  </li>
+  <li>em <b>[12]</b>, escreve-se um script PHP mínimo;
+  </li>
+  <li>em <b>[13]</b>, executa-se <b>o [index.php]</b>;
+  </li>
+</ul>
+
+<p><img src="images/100000000000074C00000147E3253FF8.png" width="561" height="98" style="width:14.833cm;height:2.589cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000074C00000147E3253FF8.png" /></p>
+<ul>
+  <li>no <b>[14]</b>, os resultados na janela <b>[output] </b>do NetBeans;
+  </li>
+  <li>Em <b>[15]</b>, cria-se um novo script;
+  </li>
+  <li>no <b>[16]</b>, o novo script;
+  </li>
+</ul>
+
+<p>O leitor poderá criar todos os scripts que se seguem em diferentes pastas do mesmo projeto PHP. Os códigos-fonte dos scripts deste documento estão disponíveis na seguinte estrutura de pastas do NetBeans:</p>
+<p><img src="images/1000000000000644000002E5AEA38430.png" width="561" height="259" style="width:14.85cm;height:6.862cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000644000002E5AEA38430.png" /></p>
+<p>Os scripts deste documento estão localizados na estrutura do projeto <strong>[scripts-console] [1]</strong>. Iremos utilizar também as bibliotecas PHP, que serão colocadas na pasta <strong>[&lt;laragon-lite&gt;/www/vendor] [2],</strong> em que &lt;laragon-lite&gt; é a pasta de instalação do software Laragon. Para que o NetBeans reconheça as bibliotecas de <strong>[2]</strong> como fazendo parte do projeto <strong>[scripts-console]</strong>, temos de incluir a pasta <strong>[vendor] [2]</strong> no ramo <strong>[Include Path] [3]</strong> do projeto. Vamos configurar o NetBeans para que a pasta <strong>[&lt;laragon-lite&gt;/www/vendor] [2]</strong> seja incluída em qualquer novo projeto PHP e não apenas no projeto <strong>[scripts-console]</strong>:</p>
+<p><img src="images/10000000000007C4000002C3270A2133.png" width="696" height="248" style="width:18.41cm;height:6.549cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007C4000002C3270A2133.png" /></p>
+<ul>
+  <li>no <b>[1-2]</b>, acedemos às opções do NetBeans;
+  </li>
+  <li>no <b>[3-4]</b>, configuramos as opções do PHP;
+  </li>
+  <li>em <b>[5-7]</b>, configura-se o <b>[Global Include Path] </b>a partir do PHP: as pastas indicadas em <b>[7] </b>são automaticamente incluídas no <b>[Include Path] </b>de qualquer projeto PHP;
+  </li>
+</ul>
+
+<p><img src="images/100000000000025000000231F599A184.png" width="207" height="196" style="width:5.48cm;height:5.189cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000025000000231F599A184.png" /></p>
+<ul>
+  <li>no <b>[9]</b>, acede-se às propriedades do ramo <b>[Include Path]</b>;
+  </li>
+  <li>no <b>[10-11]</b>, as novas bibliotecas exploradas pelo NetBeans. O NetBeans explora o código PHP dessas bibliotecas e memoriza as suas classes, interfaces, funções… para poder oferecer ajuda ao programador;
+  </li>
+</ul>
+
+<p><img src="images/1000000000000403000004FDD8A5CFCC.png" width="360" height="447" style="width:9.513cm;height:11.83cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000403000004FDD8A5CFCC.png" /></p>
+<ul>
+  <li>em <b>[12]</b>, um código utiliza a classe <b>[PhpMimeMailParser\Parser] </b>da biblioteca <b>[vendor/php-mime-mail-parser]</b>;
+  </li>
+  <li>em <b>[13]</b>, o NetBeans sugere os métodos desta classe;
+  </li>
+  <li>em <b>[14-15]</b>, o NetBeans apresenta a documentação do método selecionado;
+  </li>
+</ul>
+
+<p>O conceito de <strong>[Include Path]</strong> é, neste caso, específico do NetBeans. O PHP também possui este conceito, mas, à primeira vista, trata-se de dois conceitos diferentes.</p>
+<p>Agora que o ambiente de trabalho foi instalado, podemos abordar os conceitos básicos do PHP.</p>
 
 
 
